@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM alpine:latest
 
 # Installing transmission and openVPN
 RUN add-apt-repository ppa:transmissionbt/ppa
