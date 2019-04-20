@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM ubuntu:18.04
 
 # Installing transmission and openVPN
 RUN apt-get install software-properties-common
