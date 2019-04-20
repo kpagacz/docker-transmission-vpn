@@ -35,8 +35,8 @@ RUN rm /etc/openvpn/ovpn.zip
 # Copying nordVPN server settings
 COPY pl89.nordvpn.com.tcp.ovpn /etc/openvpn/
 
-# Copying credentials for NordVPN
-COPY credentials /etc/openvpn/credentials
+# Copyying credentials
+COPY credentials.txt /etc/openvpn/
 
 # Running openVPN
 RUN openvpn /home/docker-user/pl89.nordvpn.com.udp.ovpn
