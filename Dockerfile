@@ -1,6 +1,7 @@
 FROM ubuntu:18.04
 
 # Installing transmission and openVPN
+RUN apt-get update
 RUN apt-get install software-properties-common
 RUN add-apt-repository ppa:transmissionbt/ppa
 RUN apt-get update
