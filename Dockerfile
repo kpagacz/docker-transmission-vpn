@@ -30,14 +30,13 @@ RUN apt-get install unzip -y
 # Setting up openVPN
 RUN wget https://downloads.nordcdn.com/configs/archives/servers/ovpn.zip --directory-prefix=/etc/openvpn/
 RUN unzip /etc/openvpn/ovpn.zip
-RUN rm /etc/openvpn/ovpn.zip -d /etc/openvpn/
+RUN rm /etc/openvpn/ovpn.zip
 
+# Copying nordVPN server settings
 COPY pl89.nordvpn.com.tcp.ovpn /etc/openvpn/
 
 # Copying credentials for NordVPN
 COPY credentials /etc/openvpn/credentials
-
-# Changing the config file of a VPN server
 
 # Running openVPN
 RUN openvpn /home/docker-user/pl89.nordvpn.com.udp.ovpn
