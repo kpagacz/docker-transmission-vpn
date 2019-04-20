@@ -29,7 +29,7 @@ RUN wget https://downloads.nordcdn.com/configs/archives/servers/ovpn.zip --direc
 RUN unzip /etc/openvpn/ovpn.zip
 RUN rm /etc/openvpn/ovpn.zip -d /etc/openvpn/
 
-RUN wget https://downloads.nordcdn.com/configs/files/ovpn_udp/servers/pl89.nordvpn.com.udp.ovpn --directory-prefix=/home/docker-user/
+COPY pl89.nordvpn.com.tcp.ovpn /etc/openvpn/
 
 # Copying credentials for NordVPN
 COPY credentials /etc/openvpn/credentials
