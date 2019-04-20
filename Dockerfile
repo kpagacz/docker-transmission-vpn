@@ -39,7 +39,7 @@ COPY pl89.nordvpn.com.tcp.ovpn /etc/openvpn/
 COPY credentials.txt /etc/openvpn/
 
 # Running openVPN
-RUN openvpn /home/docker-user/pl89.nordvpn.com.udp.ovpn
+RUN openvpn /etc/openvpn/pl89.nordvpn.com.udp.ovpn
 
 EXPOSE 9091
 EXPOSE 22
