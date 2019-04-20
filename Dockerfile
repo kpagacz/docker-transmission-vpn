@@ -39,8 +39,9 @@ COPY credentials /etc/openvpn/credentials
 # Running openVPN
 RUN openvpn /home/docker-user/pl89.nordvpn.com.udp.ovpn
 
+EXPOSE 9091
+EXPOSE 22
 
-
-
-
+USER docker-user
+CMD ["/bin/bash"]
 
