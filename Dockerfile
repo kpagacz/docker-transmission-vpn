@@ -1,6 +1,7 @@
 FROM alpine:latest
 
 # Installing transmission and openVPN
+RUN apt-get install software-properties-common
 RUN add-apt-repository ppa:transmissionbt/ppa
 RUN apt-get update
 RUN apt-get install transmission-cli transmission-common transmission-daemon -y
